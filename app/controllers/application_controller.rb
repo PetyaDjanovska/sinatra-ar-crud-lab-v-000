@@ -26,6 +26,9 @@ class ApplicationController < Sinatra::Base
 
   post '/posts/:id' do
     @post = Post.find(params[:id])
+    @post.name = params[:new_name]
+    @post.content= params[:new_content]
+    @post.save
   end
 
   get '/posts/new' do

@@ -19,7 +19,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get 'posts/14/edit' do
-    @post = Post.find(params[:id])
+    @post = Post.find(params[14])
 
     erb :'edit'
   end

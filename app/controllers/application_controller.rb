@@ -29,6 +29,8 @@ class ApplicationController < Sinatra::Base
     @post.name = params[:new_name]
     @post.content= params[:new_content]
     @post.save
+
+    redirect to "/posts/#{@post.id}"
   end
 
   get '/posts/new' do
